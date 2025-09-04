@@ -3,14 +3,83 @@
 @import "tailwindcss";
 
 @keyframes gradient-x {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50% {background-position: 100% 50%;}
   100% { background-position: 0% 50%; }
 }
 
 .animate-gradient-x {
-  background-size: 300% 200%;
-  animation: gradient-x 6s ease infinite;
+  background-size: 400% 200%;
+  animation: gradient-x 8s linear infinite;
+}
+
+@keyframes gradient-y {
+  0%   { background-position: 50% 0%; }
+  50% {background-position: 50% 100%;}
+  100% { background-position: 50% 0%; }
+}
+
+.animate-gradient-y {
+  background-size: 200% 800%;
+  animation: gradient-y 6s linear infinite;
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-left {
+  opacity: 0;
+  animation-name: fade-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-right {
+  opacity: 0;
+  animation-name: fade-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  opacity: 0; /* Start invisible */
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .font-montserrat {

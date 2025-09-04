@@ -11,7 +11,14 @@ const navLinks = [
     },
     {
         id:3,
+        name:"Experience",
+        href:"#experience",
+    },
+    {
+        id:4,
         name:"Projects",
         href:"#projects",
     },
 ];
+
+export default navLinks;
