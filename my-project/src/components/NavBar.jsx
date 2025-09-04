@@ -19,7 +19,10 @@ export default function NavBar() {
     return (
         <div className="">
             {/* headshot */}
-            <img src={ headshot } className="fixed sm:left-[25px] sm:top-6 left-[13px] top-[12px] rounded-full h-12 w-12 z-50 border-2 border-white/40"></img>
+            <img
+                src={headshot}
+                className="fixed sm:left-[25px] sm:top-6 left-[13px] top-[12px] rounded-full h-12 w-12 z-50 border-2 border-white/40"
+            ></img>
 
             {/* color line for hamburger menu on mobile sizes */}
             <div className="sm:hidden block fixed top-[34px] w-screen h-[2px] z-10 bg-gradient-to-r from-indigo-500 via-teal-500 to-blue-500 animate-gradient-x"></div>
