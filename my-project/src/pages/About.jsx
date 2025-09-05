@@ -1,9 +1,9 @@
 import React from "react";
 import about from "../data/about";
 
-function createParagraph(item) {
+function createParagraph(props) {
     return (
-        <p key={item.id}>{item.text}</p>
+        <p key={props.id}>{props.text}</p>
     );
 }
 

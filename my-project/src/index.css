@@ -10,7 +10,7 @@
 
 .animate-gradient-x {
   background-size: 400% 200%;
-  animation: gradient-x 8s linear infinite;
+  animation: gradient-x 6s linear infinite;
 }
 
 @keyframes gradient-y {
@@ -77,6 +77,15 @@
   opacity: 0;
   animation-name: fade-in;
   animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.animate-fade-in-late {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-delay: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }

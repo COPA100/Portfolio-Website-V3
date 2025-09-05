@@ -1,18 +1,18 @@
 import React from "react";
 import socialLinks from "../data/socialLinks";
 
-function createSocialLink(item) {
+function createSocialLink(props) {
     return (
-        <li key={item.id}>
+        <li key={props.id}>
             <a
-                href={item.href}
+                href={props.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={item.alt}
-                title={item.alt}
+                aria-label={props.alt}
+                title={props.alt}
                 className="hover:text-blue-500 transition-colors"
             >
-                {item.svg}
+                {props.svg}
             </a>
         </li>
     );

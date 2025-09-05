@@ -5,7 +5,6 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
-import Education from "./pages/Education";
 import SocialLinks from "./components/SocialLinks";
 
 function App() {
@@ -30,6 +29,7 @@ function App() {
                 <Hero />
                 <About />
                 <Experience />
+                <Projects />
             </div>
         </div>
     );

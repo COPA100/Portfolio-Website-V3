@@ -5,9 +5,10 @@ const experience = [
         employer:"Westwood Cares Foundation",
         date:"July 2025 - Present",
         text:[
-            "Point 1",
-            "Point 1",
-            "Point 1",
+            "Maintained website using Wix, HTML, and CSS, ensuring accessibility and responsive design",
+            "Designed and integrated graphics, improving site aesthetics and user engagement",
+            "Collaborated with leadership to gather requirements and deliver updates on strict deadlines",
+            "Collected $10,000+ in donations by managing and optimizing the foundation’s website",
         ],
     },
 ];

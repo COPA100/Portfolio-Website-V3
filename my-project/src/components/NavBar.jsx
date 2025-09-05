@@ -2,14 +2,14 @@ import React from "react";
 import navLinks from "../data/navLinks";
 import headshot from "../assets/headshot.jpg";
 
-function createLink(link) {
+function createLink(props) {
     return (
-        <li key={link.id}>
+        <li key={props.id}>
             <a
-                href={link.href}
+                href={props.href}
                 className="hover:text-blue-400 transition-colors"
             >
-                {link.name}
+                {props.name}
             </a>
         </li>
     );

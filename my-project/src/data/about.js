@@ -5,7 +5,7 @@ const about = [
     },
     {
         id:2,
-        text:"When I'm not coding, I enjoy exploring new design trends, contributing to open-source projects, and learning about emerging technologies in the field.",
+        text:"When I’m not coding, I like to spend my time playing golf, pickleball, and poker, as well as learning guitar.",
     },
     {
         id:3,
