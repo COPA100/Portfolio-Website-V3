@@ -1,4 +1,4 @@
-### Portfolio Website V3
+# Portfolio Website V3
 
 ## About
 This website is essentially my resume presented in a minimal way with a creative touch. It also highlights technologies I utilized for this project, which includes HTML, CSS, Tailwind CSS, JavaScript, React.js, Vite, and Node.js. 
