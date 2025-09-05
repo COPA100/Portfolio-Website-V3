@@ -2,15 +2,13 @@ import React from "react";
 import about from "../data/about";
 
 function createParagraph(props) {
-    return (
-        <p key={props.id}>{props.text}</p>
-    );
+    return <p key={props.id}>{props.text}</p>;
 }
 
 export default function About() {
     return (
         <div id="about" className="h-auto w-full text-white z-10">
-            <div className="grid gap-3 grid-cols-1 md:grid-cols-[1fr_2fr] px-5 pt-20 lg:pl-50 lg:pr-25 sm:pl-25 sm:pr-6">
+            <div className="grid gap-3 grid-cols-1 md:grid-cols-[1fr_2fr] px-5 pt-24 lg:pl-50 lg:pr-25 sm:pl-25 sm:pr-6">
                 <div className="flex items-center h-fit">
                     <h1 className="text-4xl font-semibold">About</h1>
                     <div className="flex-grow h-[2px] bg-white/50 ml-3"></div>
