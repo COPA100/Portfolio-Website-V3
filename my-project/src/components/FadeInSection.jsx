@@ -7,7 +7,7 @@ function FadeInSection({ children }) {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => setVisible(entry.isIntersecting),
-            { threshold: 0.1 } // adjust for how early animation triggers
+            { threshold: 0.1 }
         );
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();

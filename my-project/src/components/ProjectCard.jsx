@@ -28,7 +28,7 @@ function ProjectCard(props) {
                     <p>{props.desc}</p>
 
                     <div className="mt-3">
-                        <ul className="flex gap-3">
+                        <ul className="flex flex-wrap gap-3">
                             {props.tech.map((element, index) => (
                                 <TechButton key={index} name={element} />
                             ))}
