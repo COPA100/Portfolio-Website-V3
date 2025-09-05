@@ -13,9 +13,23 @@ function App() {
 
     return (
         <div className="overflow-hidden font-montserrat">
-            <NavBar />
-            <SocialLinks />
-            <Hero />
+            <div className="h-[auto] w-full bg-[#020617] relative z-0">
+                <div
+                    className="absolute inset-0 -z-10"
+                    style={{
+                        background: "#020617",
+                        backgroundImage: `
+                            linear-gradient(to right, rgba(71,85,105,0.3) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(71,85,105,0.3) 1px, transparent 1px)
+                        `,
+                        backgroundSize: "32px 32px, 32px 32px, 100% 100%",
+                    }}
+                />
+                <NavBar />
+                <SocialLinks />
+                <Hero />
+                <About />
+            </div>
         </div>
     );
 }

@@ -24,30 +24,10 @@
   animation: gradient-y 6s linear infinite;
 }
 
-@keyframes fade-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-left {
-  opacity: 0;
-  animation-name: fade-left;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
-}
-
 @keyframes fade-right {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(-20px);
   }
   100% {
     opacity: 1;
@@ -64,6 +44,26 @@
   animation-fill-mode: forwards;
 }
 
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-left {
+  opacity: 0;
+  animation-name: fade-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -74,11 +74,10 @@
 }
 
 .animate-fade-in {
-  opacity: 0; /* Start invisible */
+  opacity: 0;
   animation-name: fade-in;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
