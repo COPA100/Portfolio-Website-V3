@@ -29,6 +29,7 @@ function App() {
                 <SocialLinks />
                 <Hero />
                 <About />
+                <Experience />
             </div>
         </div>
     );
