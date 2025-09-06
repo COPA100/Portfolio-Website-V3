@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes gradient-x {
   0%   { background-position: 0% 50%; }
   50% {background-position: 100% 50%;}
@@ -10,7 +14,7 @@
 
 .animate-gradient-x {
   background-size: 400% 200%;
-  animation: gradient-x 6s linear infinite;
+  animation: gradient-x 5s linear infinite;
 }
 
 @keyframes gradient-y {
@@ -21,7 +25,7 @@
 
 .animate-gradient-y {
   background-size: 200% 800%;
-  animation: gradient-y 6s linear infinite;
+  animation: gradient-y 5s linear infinite;
 }
 
 @keyframes fade-right {
@@ -92,4 +96,31 @@
 
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* these are for the hamburger */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out forwards;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.3s ease-in forwards;
 }

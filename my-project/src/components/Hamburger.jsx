@@ -4,12 +4,23 @@ import CreateLinkNav from "./CreateLinkNav";
 
 export default function Hamburger() {
     const [open, setOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
 
     const toggleMenu = () => {
-        setOpen(!open);
+        if (open) {
+            closeMenu();
+        } else {
+            setOpen(true);
+        }
     };
 
-    const closeMenu = () => setOpen(false);
+    const closeMenu = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setOpen(false);
+            setIsClosing(false);
+        }, 300);
+    };
 
     return (
         <div className="">
@@ -42,13 +53,20 @@ export default function Hamburger() {
                 </button>
             </div>
 
+            {/* div with the hamburger panel that pops up */}
             {open && (
                 <>
                     <div
                         className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
                         onClick={closeMenu}
                     />
-                    <div className="fixed top-0 right-0 w-1/2 h-screen z-40 bg-white/10 backdrop-blur-md border-l border-white/20 shadow-lg flex justify-center items-center">
+                    <div
+                        className={`fixed top-0 right-0 w-1/2 h-screen z-40 bg-white/10 backdrop-blur-md border-l border-white/20 shadow-lg flex justify-center items-center ${
+                            isClosing
+                                ? "animate-slide-out-right"
+                                : "animate-slide-in-right"
+                        }`}
+                    >
                         <ul className="flex flex-col px-6 py-2 text-white font-medium gap-10 uppercase text-center">
                             {navLinks.map((element) => (
                                 <CreateLinkNav

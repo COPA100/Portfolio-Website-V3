@@ -10,7 +10,7 @@ export default function NavBar() {
             {/* headshot */}
             <img
                 src={headshot}
-                className="fixed sm:left-[25px] sm:top-6 left-[13px] top-[12px] rounded-full h-12 w-12 z-30 border-2 border-white/40"
+                className="fixed sm:left-[25px] sm:top-6 left-[13px] top-[12px] rounded-full h-12 w-12 z-30 border-2 border-white/40 hover:scale-105 transition-all duration-300"
             ></img>
             <Hamburger />
             {/* navbar with glass */}
