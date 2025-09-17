@@ -2,8 +2,9 @@
 
 @import "tailwindcss";
 
-html {
+html, body {
   scroll-behavior: smooth;
+  background: #020617;
 }
 
 @keyframes gradient-x {
