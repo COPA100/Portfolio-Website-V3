@@ -15,7 +15,7 @@ function ProjectCard(props) {
                     <div className="overflow-hidden relative">
                         <img
                             src={props.img}
-                            className="w-full h-auto object-cover group-hover:scale-110 transition-all duration-500 ease-out"
+                            className="w-full h-auto object-cover group-hover:scale-120 transition-all duration-500 ease-out"
                             alt={props.title}
                         ></img>
                         {/* cool shadow */}

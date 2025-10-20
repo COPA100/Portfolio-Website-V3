@@ -1,15 +1,15 @@
 const about = [
     {
-        id:1,
-        text:"I'm a first-year student at the University of Virginia, pursuing a BS in Computer Science and graduating in May 2029. I specialize in frontend development and love building websites that look great and work smoothly.",
+        id: 1,
+        text: "I’m a first-year Computer Science student at the University of Virginia, graduating in May 2029. I’m passionate about building software that solves real problems and learning from every project I tackle.",
     },
     {
-        id:2,
-        text:"Recently, I’ve become interested in backend development and want to expand my skills to become a more well-rounded developer. I’m always looking for opportunities to learn, work on cool projects, and connect with others in tech.",
+        id: 2,
+        text: "I focus on full-stack development, building both frontend and backend solutions. I enjoy designing scalable systems, developing intuitive user experiences, and collaborating with others to bring ideas to life.",
     },
     {
-        id:3,
-        text:"Outside of coding, I enjoy golf, pickleball, poker, and learning guitar.",
+        id: 3,
+        text: "Outside of tech, I play golf and pickleball, enjoy strategy games like poker, and am learning to play the guitar.",
     },
 ];
 
