@@ -9,11 +9,6 @@ export default function Footer() {
                     reserved.
                 </p>
             </div>
-            <div className="absolute bottom-1 right-2">
-                <p className="text-white/30 text-[7px]">
-                    *Soon to be fullstack
-                </p>
-            </div>
         </div>
     );
 }

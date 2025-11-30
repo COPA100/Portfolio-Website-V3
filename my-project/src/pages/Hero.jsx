@@ -29,7 +29,7 @@ export default function Hero() {
                     <div className="flex">
                         <h2 className="text-[5vw] sm:text-[2vw] text-white opacity-50">
                             F
-                            <TypingText text="ullstack* Engineer" speed={100} />
+                            <TypingText text="ullstack Engineer" speed={100} />
                         </h2>
                     </div>
 
