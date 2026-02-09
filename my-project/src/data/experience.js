@@ -5,9 +5,9 @@ const experience = [
         employer:"HooHacks",
         date:"September 2025 - Present",
         text:[
-            "Develop registration and judging software supporting 1,000+ participants and event organizers",
-            "Build responsive, scalable features using React, TypeScript, Tailwind, and Firebase for production deployment",
-            "Collaborate with a team to design and integrate new features, improving overall platform efficiency and usability",
+            "Develop secure registration, authentication, and judging systems using React, TypeScript, and Firebase, supporting 1,000+ participants and streamlining event operations",
+            "Led development of the marketing website with 2 other developers, creating a polished, user-friendly site that improved participant sign-ups and engagement",
+            "Collaborate with 7 other developers via Git and code reviews to maintain a high-quality, production-ready codebase powering the hackathon",
         ],
     },
     {
@@ -16,9 +16,9 @@ const experience = [
         employer:"Westwood Cares Foundation",
         date:"July 2025 - Present",
         text:[
-            "Maintained website using Wix, HTML, and CSS, ensuring accessibility and responsive design",
-            "Collaborated with leadership to gather requirements and deliver updates on strict deadlines",
-            "Collected $10,000+ in donations by managing and optimizing the foundation’s website",
+            "Extend native Wix capabilities with custom HTML/CSS, ensuring accessibility, responsive design, and performance for a donor base of 200+ people",
+            "Partner with 3 executives to translate complex requirements into immediate site updates under strict 24-hour deadlines, ensuring the foundation could launch time-sensitive fundraising campaigns",
+            "Revamp 2 critical UI/UX pathways based on user analytics, driving $25,000+ in donations via optimized payment flows",
         ],
     }
 ];

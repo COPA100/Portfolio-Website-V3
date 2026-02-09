@@ -9,7 +9,7 @@ const about = [
     },
     {
         id: 3,
-        text: "Outside of tech, I play golf and pickleball, enjoy strategy games like poker, and am learning to play the guitar.",
+        text: "Outside the IDE, I'm found perfecting my serve on the pickleball court, playing a round of golf, or trying my hand at the guitar.",
     },
 ];
 
