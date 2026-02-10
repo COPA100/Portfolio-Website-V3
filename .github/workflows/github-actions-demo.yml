@@ -1,19 +1,66 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v5
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+name: Build, Deploy & Notify
 
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: my-project/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: my-project
+
+      - name: Build
+        run: npm run build
+        working-directory: my-project
+
+      - name: Add CNAME for custom domain
+        run: cp CNAME dist/CNAME
+        working-directory: my-project
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./my-project/dist
+
+      - name: Notify Discord
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            COLOR=3066993
+            DESCRIPTION="**${{ github.event.release.tag_name }}** has been built and deployed successfully!"
+          else
+            COLOR=15158332
+            DESCRIPTION="**${{ github.event.release.tag_name }}** deployment failed."
+          fi
+
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{
+              \"embeds\": [{
+                \"title\": \"🚀 Portfolio Deployment — ${STATUS:-${{ job.status }}}\",
+                \"description\": \"${DESCRIPTION}\",
+                \"color\": ${COLOR},
+                \"fields\": [
+                  { \"name\": \"Release\", \"value\": \"[${{ github.event.release.tag_name }}](${{ github.event.release.html_url }})\", \"inline\": true },
+                  { \"name\": \"Triggered by\", \"value\": \"${{ github.actor }}\", \"inline\": true }
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            ${{ secrets.DISCORD_WEBHOOK_URL }}
