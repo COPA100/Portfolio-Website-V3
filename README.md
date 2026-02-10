@@ -36,6 +36,11 @@ my-project/
 └── package.json        # Dependencies and scripts
 ```
 
+## Versioning
+- **Major**: redesigns
+- **Minor**: new pages/features
+- **Patch**: fixes & small tweaks
+
 ## Customization
 
 All content can be easily updated by modifying the files in the `src/data/` directory:
